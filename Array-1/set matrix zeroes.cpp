@@ -18,12 +18,14 @@ public:
                 }
             }
         }
-        if(marker_row==-1)return;
+        if(marker_row==-1) return;
         for(int j=0;j<n;j++){
             if(j==marker_col)continue;
-            if(matrix[marker_row][j]==0){
-                for(int i=0;i<m;i++){
-                    matrix[i][j]=0;
+            else{
+                if(matrix[marker_row][j]==0){
+                    for(int i=0;i<m;i++){
+                        matrix[i][j]=0;
+                    }
                 }
             }
         }
@@ -34,8 +36,6 @@ public:
                 }
             }
         }
-        for(int i=0;i<m;i++){
-            matrix[i][marker_col]=0;
-        }
+        for(int i=0;i<m;i++)matrix[i][marker_col]=0;
     }
 };
